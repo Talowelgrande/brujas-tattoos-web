@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now - Bruja's Tattoos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* =========================================
+            ESTILOS ESPECÍFICOS DEL FORMULARIO
+           ========================================= */
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            color: var(--accent-green);
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        /* El efecto de resplandor al escribir */
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent-purple);
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.3);
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Estilo para el select para que haga match con el tema oscuro */
+        select option {
+            background: #111;
+            color: #fff;
+        }
+
+        .alert-box {
+            display: none;
+            padding: 15px;
+            background: rgba(10, 255, 96, 0.1);
+            border: 1px solid var(--accent-green);
+            color: #fff;
+            text-align: center;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Que la cuadrícula se rompa en celulares */
+        @media (max-width: 600px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="imagenes/logo_brujas_tattoo_final.png" alt="Bruja's Logo" class="nav-logo">
+            <span>Bruja's Tattoos</span>
+        </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index-en.html#">HOME</a></li>
+            <li><a href="index-en.html#nuestro-proceso">PROCESS</a></li>
+            <li><a href="index-en.html#sobre-nosotros">ABOUT US</a></li>
+            <li><a href="index-en.html#servicios">SERVICES</a></li>
+            <li><a href="galeria-en.html">GALLERY</a></li>
+            <li><a href="registros-en.html" class="active btn-cta">BOOK NOW</a></li>
+        </ul>
+    </nav>
+
+    <section class="container" style="padding-top: 100px; padding-bottom: 80px;">
+
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 style="font-family: var(--font-title); font-size: 3rem; color: #fff;">
+                LET'S TALK ABOUT YOUR <span style="color: var(--accent-purple); text-shadow: 0 0 15px var(--accent-purple);">NEXT TATTOO</span>
+            </h2>
+            <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                Expert artists will provide you with the best experience at any of our studios.
+            </p>
+        </div>
+
+        <div class="contact-wrapper">
+
+            <div class="contact-info-column">
+
+                <div class="sede-card glass-panel">
+                    <h3>JESÚS MARÍA STUDIO</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <span>Calle Mariscal Luzuriaga 434 - CC. Shopping Way</span>
+                                <span>Booth: 101, 102 & 103 - Jesús María, Lima</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span><strong>Whatsapp:</strong> +51 939 707 237</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/51939707237" target="_blank" class="btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Contact Us
+                    </a>
+                </div>
+
+                <div class="sede-card glass-panel">
+                    <h3>MIRAFLORES STUDIO</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <span>Av. José Pardo 541, Int 111</span>
+                                <span>Miraflores, Lima</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span><strong>Whatsapp:</strong> +51 951 154 244</span>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/51951154244" target="_blank" class="btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Contact Us
+                    </a>
+                </div>
+
+                <div class="info-extra">
+                    <p><i class="fa-regular fa-clock"></i> <strong>Open:</strong> Monday to Friday: 8:00 am - 6:00 pm
+                        <br> <span style="margin-left: 28px;">Saturday: 8:00 am - 1:00 pm</span>
+                    </p>
+                    <p><i class="fa-regular fa-envelope"></i> contacto@brujastattooshop.com</p>
+                </div>
+
+            </div>
+
+            <div class="contact-form-column glass-panel">
+                <h3 style="font-family: var(--font-title); font-size: 1.8rem; margin-bottom: 20px; color: #fff; text-align: center;">
+                    Registration <span style="color: var(--accent-green);">Form</span></h3>
+
+                <div id="successMessage" class="alert-box">
+                    ✅ Registration Successful! Your data has been sent.
+                </div>
+                <div id="errorMessage" class="alert-box" style="background: rgba(220, 53, 69, 0.1); border-color: #dc3545;">
+                    ❌ Error saving. Please try again.
+                </div>
+
+                <form id="registroForm">
+                    <div class="form-group">
+                        <label>Full Name (*)</label>
+                        <input type="text" id="nombre" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Phone / WhatsApp (*)</label>
+                            <input type="tel" id="telefono" required pattern="^(?!\+?([0-9])\1+$)\+?[0-9]{8,15}$"
+                                title="Enter a valid number. Consecutive repeated digits are not allowed (E.g.: 33333333)."
+                                placeholder="E.g.: +51 987654321">
+                            <small style="color: #888; font-size: 0.8rem; margin-top: 5px; display: block;">
+                                Include your country code (E.g.: +51 for Peru)
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <label>Preferred Studio</label>
+                            <select id="sede-preferencia">
+                                <option value="Jesus Maria">Jesús María Studio</option>
+                                <option value="Miraflores">Miraflores Studio</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Blood Type (Optional)</label>
+                        <select id="sangre">
+                            <option value="Desconocido">I don't know / Prefer not to say</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Known Allergies</label>
+                        <textarea id="alergias" rows="2"
+                            placeholder="Medications, latex, metals (Write 'None' if you don't have any)"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Medical Conditions</label>
+                        <input type="text" id="condiciones" placeholder="Diabetes, coagulation issues, pregnancy...">
+                    </div>
+
+                    <div class="form-group" style="display: flex; align-items: flex-start; gap: 15px; margin-top: 20px;">
+                        <input type="checkbox" id="checkEdad" style="width: 20px; height: 20px; margin-top: 2px;" required>
+                        <label for="checkEdad" style="margin:0; font-size: 0.85rem; color: #ccc; font-weight: normal;">
+                            I declare that I am of legal age and that all the information provided is real and accurate.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-main" style="width: 100%; margin-top: 10px; border-color: var(--accent-purple);">
+                        Submit Registration
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <a href="registros.html" class="lang-toggle">
+        <i class="fa-solid fa-globe"></i> <span>ES</span>
+    </a>
+
+    <footer class="site-footer">
+        <div class="footer-content-minimal">
+            <img src="imagenes/logo_brujas_tattoo_final.png" alt="Bruja's Tattoos Logo" class="footer-logo">
+            <p class="footer-description">We transform your skin into permanent art.</p>
+            
+            <div class="social-links-big">
+                <a href="https://wa.me/51939707237" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/brujastattooshop/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@brujastattooshop" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/brujastattooshop/" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bruja's Tattoos and Piercings. Lima, Peru.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
